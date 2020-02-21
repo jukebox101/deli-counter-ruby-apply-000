@@ -1,4 +1,5 @@
 # Write your code here.
+$int = 0
 def line(lineArr)
   counter = 0
   lineVar = "The line is currently:"
@@ -13,9 +14,9 @@ def line(lineArr)
   end
 end
 
-def take_a_number(lineArr, newCustomer)
-  lineArr << newCustomer
-  puts "Welcome, #{newCustomer}. You are number #{lineArr.rindex(newCustomer) + 1} in line."
+def take_a_number
+  $int += 1
+  puts "Welcome. You are number #{$int} in line."
 end
 
 def now_serving(lineArr)
@@ -26,3 +27,7 @@ def now_serving(lineArr)
     puts "Currently serving #{lineArr.shift}."
   end
 end
+
+take_a_number
+take_a_number
+take_a_number
